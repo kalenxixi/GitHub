@@ -15,4 +15,9 @@ public class CameraController : MonoBehaviour {
 	void Update () {
         transform.position = player.transform.position + offset;
 	}
+
+    void OnTriggerEnter(Collider other){
+        Destroy(other.gameObject);
+    }
+
 }
